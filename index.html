@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Daily Habit Tracker</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- HEADER -->
+        <header class="header">
+
+            <div>
+                <p class="welcome">Welcome back 👋</p>
+
+                <h1>Daily Habit Tracker</h1>
+
+                <p id="todayDate"></p>
+            </div>
+
+            <button id="themeBtn">
+                🌙
+            </button>
+
+        </header>
+
+
+        <!-- STATISTICS -->
+        <section class="stats">
+
+            <div class="stat-card">
+                <h3>Total Habits</h3>
+                <h2 id="totalHabits">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <h3>Completed</h3>
+                <h2 id="completedHabits">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <h3>Progress</h3>
+                <h2 id="progressPercent">0%</h2>
+            </div>
+
+            <div class="stat-card">
+                <h3>🔥 Streak</h3>
+                <h2 id="streak">0 days</h2>
+            </div>
+
+        </section>
+
+
+        <!-- ADD HABIT -->
+        <section class="add-section">
+
+            <h2>Add New Habit</h2>
+
+            <p>Create a habit and start tracking it.</p>
+
+            <form id="habitForm">
+
+                <input
+                    type="text"
+                    id="habitInput"
+                    placeholder="e.g. Study JavaScript"
+                    autocomplete="off"
+                >
+
+                <select id="categoryInput">
+
+                    <option value="Study">
+                        📚 Study
+                    </option>
+
+                    <option value="Health">
+                        💪 Health
+                    </option>
+
+                    <option value="Fitness">
+                        🏃 Fitness
+                    </option>
+
+                    <option value="Personal">
+                        🌱 Personal
+                    </option>
+
+                </select>
+
+                <select id="priorityInput">
+
+                    <option value="High">
+                        🔴 High
+                    </option>
+
+                    <option value="Medium" selected>
+                        🟡 Medium
+                    </option>
+
+                    <option value="Low">
+                        🟢 Low
+                    </option>
+
+                </select>
+
+                <button type="submit">
+                    + Add Habit
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- PROGRESS -->
+        <section class="progress-section">
+
+            <div>
+                <h2>Today's Progress</h2>
+
+                <p>Complete your habits for today.</p>
+            </div>
+
+            <h2 id="progressText">0%</h2>
+
+            <div class="progress-bar">
+
+                <div id="progressFill"></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- HABITS -->
+        <section class="habits-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <h2>My Habits</h2>
+
+                    <p>Track your daily habits.</p>
+                </div>
+
+                <select id="filterSelect">
+
+                    <option value="all">
+                        All
+                    </option>
+
+                    <option value="completed">
+                        Completed
+                    </option>
+
+                    <option value="pending">
+                        Pending
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- SEARCH -->
+            <div class="search-box">
+
+                <span>🔍</span>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search habits..."
+                    autocomplete="off"
+                >
+
+            </div>
+
+
+            <div id="habitList"></div>
+
+
+            <div id="emptyState">
+
+                <h3>🌱 No habits yet</h3>
+
+                <p>
+                    Add your first habit to get started.
+                </p>
+
+            </div>
+
+
+            <div
+                id="noResults"
+                class="no-results"
+            >
+
+                <h3>🔍 No habits found</h3>
+
+                <p>
+                    Try searching for something else.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- WEEKLY OVERVIEW -->
+        <section class="weekly-section">
+
+            <h2>Weekly Overview</h2>
+
+            <p>Your progress over the last 7 days.</p>
+
+            <div id="weeklyChart"></div>
+
+        </section>
+
+    </div>
+
+
+    <footer>
+
+        <p>
+            Built with HTML, CSS & JavaScript ❤️
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
